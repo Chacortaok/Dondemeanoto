@@ -20,10 +20,11 @@ p.customfont {
 	<div class="center">
 		<section style="background-color: white; width: 100%; height: 107px;">
 		<img src="Assets\logo.png" height="100px" width="100px" style="margin-left: 15px;">
+      <button id="perfil" onclick="window.location.href='perfil.html'" style=" cursor: pointer; background-color: white; border: none; position: absolute; left: 1700px; height: 100px; width: 100px; top: 5px; display: none; "><img src="Assets\perfil.png"></button>
 	    </section>
          <input type="button" onclick="login()" id="show" style="display: none;">
 
-         <label for="show" class="show-btn" style=" position: absolute; left: 1550px; width: 178px; top: 55px; font-family: Asaps; font-size: 30px; color: #000000; cursor: pointer;" >Iniciar Sesión </label> </input>
+         <label id="loginbutton" for="show" class="show-btn" style=" position: absolute; left: 1550px; width: 178px; top: 55px; font-family: Asaps; font-size: 30px; color: #000000; cursor: pointer;" >Iniciar Sesión </label> </input>
          
 
          <div id="form1" class="container" style="border-width: 1px; border-radius: 10px;">
@@ -48,7 +49,7 @@ p.customfont {
                </div>
                <div class="btn">
                   <div class="inner"></div>
-                  <button type="submit" style="font-family: Asaps;">Iniciar sesión</button>
+                  <button type="submit" onclick="logged()" style="font-family: Asaps;">Iniciar sesión</button>
                </div>
                <div class="signup-link">
                   <a style="cursor: pointer;" onclick="signup()" style="font-family: Asaps;">Regístrate ahora</a>
@@ -61,7 +62,7 @@ p.customfont {
 <input type="button" onclick="signup()" id="show2" style="display: none;">
 
 
-<label for="show2" style="background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); position:absolute; left: 1650px;padding: 10px; width: 170px; top: 27px; font-family: Asaps; font-size: 30px; color: white; cursor: pointer; border-radius: 10px;" > Registrarse </label></input>
+<label id="signupbutton" for="show2" style="background: linear-gradient(115deg, #56d8e4 10%, #9f01ea 90%); position:absolute; left: 1650px;padding: 10px; width: 170px; top: 27px; font-family: Asaps; font-size: 30px; color: white; cursor: pointer; border-radius: 10px;" > Registrarse </label></input>
 <div id="form2" class="container2" style="border-width: 1px; border-radius: 10px;">
 
 	
@@ -101,7 +102,7 @@ p.customfont {
                </div>
                <div class="btn">
                   <div class="inner"></div>
-                  <button type="submit" style="font-family: Asaps;">Regístrate</button>
+                  <button type="submit" onclick="logged()" style="font-family: Asaps;">Regístrate</button>
                </div>
                <div class="signup-link">
                   <a style="cursor: pointer;" onclick="login()" style="font-family: Asaps;">Iniciar sesión</a>
@@ -120,6 +121,15 @@ function signup() {
 function login() {
 	document.getElementById("form1").style.display = "block";
 	document.getElementById("form2").style.display = "none";
+}
+</script>
+<script type="text/javascript">
+function logged(){
+   document.getElementById("perfil").style.display = "block";
+   document.getElementById("loginbutton").style.display = "none";
+   document.getElementById("signupbutton").style.display = "none";
+   document.getElementById("form2").style.display = "none";
+   document.getElementById("form1").style.display = "none";
 }	
 </script>
 </body>
