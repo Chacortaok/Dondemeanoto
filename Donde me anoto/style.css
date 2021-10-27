@@ -10,13 +10,64 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
+
+@font-face {
+    font-family: "Asaps";
+    src: url(Assets/Asap-Bold.ttf) format("truetype");
+}
+p.customfont { 
+    font-family: Asaps;
+}
 body{
   height: 100vh;
   width: 100%;
-  
+  background-image: url("Assets/fondo.png");
+  background-size: cover;  
+  font-family: Asaps;
 }
 .show-btn{
   
+}
+
+#logo{
+  margin-left: 15px;
+}
+
+#perfil{
+  cursor: pointer; 
+  background-color: white; 
+  border: none; 
+  position: absolute; 
+  left: 1700px; 
+  height: 100px; 
+  width: 100px; 
+  top: 5px; 
+  display: none;
+}
+
+#show{
+  display: none;
+}
+
+#form1{
+  border-width: 1px; 
+  border-radius: 10px;
+}
+#loginbutton{
+  position: absolute; 
+  left: 1550px; 
+  width: 178px; 
+  top: 55px; 
+  font-family: Asaps; 
+  font-size: 30px; 
+  color: #000000; 
+  cursor: pointer;
+}
+.header{
+  background-color: white; 
+  width: 100%; 
+  height: 107px;
 }
 .show-btn, .container{
   position: absolute;
@@ -107,6 +158,7 @@ input[type="checkbox"]{
 }
 form .data label{
   font-size: 18px;
+  font-family: Asaps;
 }
 form .data input{
   height: 100%;
@@ -114,10 +166,12 @@ form .data input{
   padding-left: 10px;
   font-size: 17px;
   border: 1px solid silver;
+  font-family: Asaps;
 }
 form .data input:focus{
   border-color: #3498db;
   border-bottom-width: 2px;
+  font-family: Asaps;
 }
 form .forgot-pass{
   margin-top: -8px;
@@ -125,9 +179,11 @@ form .forgot-pass{
 form .forgot-pass a{
   color: #3498db;
   text-decoration: none;
+  font-family: Asaps;
 }
 form .forgot-pass a:hover{
   text-decoration: underline;
+  font-family: Asaps;
 }
 form .btn{
   margin: 30px 0;
@@ -144,12 +200,13 @@ form .btn .inner{
   position: absolute;
   left: -100%;
   z-index: -1;
-  background: -webkit-linear-gradient(right, #56d8e4, #9f01ea, #56d8e4, #9f01ea);
+  background: -webkit-linear-gradient(right, #3F77C6, #9BB7D4, #3F77C6, #9BB7D4);
   transition: all 0.4s;
   font-family: Asaps;
 }
 form .btn:hover .inner{
   left: 0;
+  font-family: Asaps;
 }
 form .btn button{
   height: 100%;
@@ -161,14 +218,40 @@ form .btn button{
   font-weight: 500;
   letter-spacing: 1px;
   cursor: pointer;
+  font-family: Asaps;
 }
 form .signup-link{
   text-align: center;
+  font-family: Asaps;
 }
 form .signup-link a{
   color: #3498db;
   text-decoration: none;
+  font-family: Asaps;
 }
 form .signup-link a:hover{
   text-decoration: underline;
+}
+
+#show2{
+  display: none;
+}
+
+#signupbutton{
+  background: black; 
+  position:absolute; 
+  left: 1650px;
+  padding: 10px; 
+  width: 160px; 
+  top: 30px; 
+  font-family: Asaps; 
+  font-size: 27px; 
+  color: white; 
+  cursor: pointer; 
+  border-radius: 10px;
+}
+
+#form2{
+  border-width: 1px; 
+  border-radius: 10px;
 }
